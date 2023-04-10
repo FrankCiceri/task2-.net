@@ -9,34 +9,6 @@ namespace task2driver
     public class Palindrome
     {
 
-        public static string BuildSB()
-        {
-            string input = Console.ReadLine();
-            int specialcharCount = 0;
-            StringBuilder sb = new StringBuilder();
-
-            for (int i = 0; i < input.Length; i++)
-            {
-                if (char.IsLetter(input[i]) || input[i].Equals('-'))
-                {
-                    if (specialcharCount > 0)
-                    {
-                        sb.Append(" ");
-                        specialcharCount = 0;
-                    }
-                    sb.Append(input[i]);
-                }
-                else
-                {
-                    specialcharCount++;
-                }
-
-            }
-
-            return sb.ToString();
-        }
-
-
         public static string[] BuildList() {
             string input = Console.ReadLine();
             string[] words = input.Replace(",", string.Empty).Split();
