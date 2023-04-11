@@ -9,7 +9,7 @@ namespace task2driver
         {
             //Palindrome.DisplayPalindrome();
             //Swap.SwapValues();
-
+            Matrix.FillMatrix();
         }
                        
      }
