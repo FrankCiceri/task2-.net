@@ -25,7 +25,7 @@ namespace task2driver
 
         public static int[,] BuildMatrix()
         {
-
+            Console.WriteLine("Matrix Generated....");
             Random random = new Random();
             int n = random.Next(3,10);
             int m = random.Next(3,10);
@@ -46,11 +46,14 @@ namespace task2driver
         }
 
 
-        public static int[,] FillMatrix() { 
+        public static void FillMatrix() { 
+            
+            
            int[,] initialMatrix = BuildMatrix();
            DisplayMatrix(initialMatrix);
 
             int[,] zeroOne = new int[initialMatrix.GetLength(0), initialMatrix.GetLength(1)];
+            
 
             for (int i = 0; i < initialMatrix.GetLength(0); i++) { 
                 for (int j = 0;j < initialMatrix.GetLength(1);j++)
@@ -74,10 +77,9 @@ namespace task2driver
                 }           
             }
             Console.WriteLine("---------------------------------");
-
+            Console.WriteLine("Filled Matrix....");
             DisplayMatrix(zeroOne);
-            return zeroOne;            
-        
+            
         }
         
 
