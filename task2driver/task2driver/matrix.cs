@@ -57,24 +57,23 @@ namespace task2driver
                 {
                     if (i == j)
                     {
-                        zeroOne[i, j] = initialMatrix[i, j];
+                        zeroOne[i, j] = initialMatrix[i, j];//MainDiag
                     }
                     else if (i < j)
                     {
-                        zeroOne[i, j] = 1;
+                        zeroOne[i, j] = 1;//upperRight
 
                     }
                     else if (i > j) {
 
-                        zeroOne[i,j] = 0; //this if is not that necessary because by default the matrix has 0 as values in the initialization,
+                        zeroOne[i,j] = 0; //lowerLeft
+                        //this if is not that necessary because by default the matrix has 0 as values in the initialization,
                                           //so doing the ones part is enough.
                     }
 
                 }           
             }
-
-
-            Console.WriteLine("-----------------------------------------------------");
+            Console.WriteLine("---------------------------------");
 
             DisplayMatrix(zeroOne);
             return zeroOne;            
