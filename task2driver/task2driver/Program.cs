@@ -7,7 +7,8 @@ namespace task2driver
     {
         public static void Main(string[] args)
         {
-            Palindrome.DisplayPalindrome();
+            //Palindrome.DisplayPalindrome();
+            Swap.SwapValues();
 
         }
                        

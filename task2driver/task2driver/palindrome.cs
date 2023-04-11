@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace task2driver
 {
@@ -21,7 +18,7 @@ namespace task2driver
 
         public static void DisplayPalindrome()
         {
-            //string[] words = BuildSB().Split(' ');
+            
             string[] words = BuildList();
             bool isLast = false;
             for (int i = 0; i < words.Length; i++)
