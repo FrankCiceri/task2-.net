@@ -8,6 +8,8 @@ namespace task2driver
         public static void Main(string[] args)
         {
 
+
+            
             /*Console.WriteLine("------------Palindrome----------- \n");
             Palindrome.DisplayPalindrome();
 
@@ -18,6 +20,10 @@ namespace task2driver
             Matrix.FillMatrix();*/
 
             GameofLife.Game();
+
+
+
+            
         }
                        
      }
