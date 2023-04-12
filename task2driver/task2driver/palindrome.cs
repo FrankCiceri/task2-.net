@@ -7,6 +7,7 @@ namespace task2driver
     {
 
         public static string[] BuildList() {
+            Console.Write("Enter your String= ");
             string input = Console.ReadLine();
             string[] words = input.Replace(",", string.Empty).Split();
            

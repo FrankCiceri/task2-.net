@@ -6,6 +6,7 @@ namespace task2driver
     public class Swap
     {
         public static string[] BuildArray() {
+            Console.Write("Enter your array= ");
             string input = Console.ReadLine();
             StringBuilder sb = new StringBuilder(input);
             sb.Replace(",", "");

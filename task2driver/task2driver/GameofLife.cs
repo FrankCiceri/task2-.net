@@ -48,12 +48,21 @@ namespace task2driver
         public static void Game()
         {
             string[,] field = //InitializeField(); //use this method if you want to generate a random field
-            {
+           /* {
                 { "-", "+", "+", "+" },
-                { "-", "-", "+", "+" },
+                { "-", "-", "+", "+" },  //This will end when there are only empty cells
                 { "-", "+", "-", "-" },
                 { "-", "-", "-", "+" }
+            };*/
+
+            {
+                { "-", "+", "-", "-" },
+                { "+", "-", "+", "-" },  // this will never generate, and it will end because of that
+                { "-", "+", "-", "-" },
+                { "-", "-", "-", "-" }
             };
+
+
             string[,] newState = field.Clone() as string[,];
             bool loop = true;
             int t = 0;
