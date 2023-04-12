@@ -48,19 +48,19 @@ namespace task2driver
         public static void Game()
         {
             string[,] field = //InitializeField(); //use this method if you want to generate a random field
-           /* {
+           {
                 { "-", "+", "+", "+" },
                 { "-", "-", "+", "+" },  //This will end when there are only empty cells
                 { "-", "+", "-", "-" },
                 { "-", "-", "-", "+" }
-            };*/
+            };
 
-            {
+           /* {
                 { "-", "+", "-", "-" },
                 { "+", "-", "+", "-" },  // this will never generate, and it will end because of that
                 { "-", "+", "-", "-" },
                 { "-", "-", "-", "-" }
-            };
+            };*/
 
 
             string[,] newState = field.Clone() as string[,];
@@ -116,7 +116,7 @@ namespace task2driver
               
             }
         }
-
+        //This method goes around the adjacent neighbors and then calls the checkNeigbor method for validation about "+" that are around
         public static int CalcNeighbors(string[,] field, int i, int j)
         {
             int neighbors = 0;
@@ -135,6 +135,7 @@ namespace task2driver
             return neighbors;
         }
 
+        //This method avoids checking outside the field and that we are not counting the current cell
         public static int checkNeighbor(string[,] field, int x, int y, int i, int j)
         {
             bool restricted = !(
@@ -144,7 +145,6 @@ namespace task2driver
             {
                 if (!(x == i && y == j))
                 {
-                    //Console.WriteLine("for" + i + "," + j + " on "+ x + "," + y + " it found? "+ (field[x, y] == "+"));
                     if (field[x, y] == "+")
                     {
                         return 1;
@@ -154,6 +154,7 @@ namespace task2driver
             return 0;
         }
 
+        //This method checks whether the new state is the same as the field state or not
         public static bool checkSameState(string[,] field, string[,] newState)
         {
             for (int i = 0; i < field.GetLength(0); i++)
@@ -168,7 +169,7 @@ namespace task2driver
             }
             return true;
         }
-
+        //This method checks whether the new state has only empty cells or not
         public static bool checkAllEmpty(string[,] field, string[,] newState)
         {
             for (int i = 0; i < field.GetLength(0); i++)
